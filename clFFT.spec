@@ -4,7 +4,7 @@
 #
 Name     : clFFT
 Version  : 2.12.2
-Release  : 1
+Release  : 2
 URL      : https://github.com/clMathLibraries/clFFT/archive/v2.12.2.tar.gz
 Source0  : https://github.com/clMathLibraries/clFFT/archive/v2.12.2.tar.gz
 Summary  : Open source OpenCL FFT library
