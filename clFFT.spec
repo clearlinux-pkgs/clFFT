@@ -4,7 +4,7 @@
 #
 Name     : clFFT
 Version  : 2.12.2
-Release  : 2
+Release  : 3
 URL      : https://github.com/clMathLibraries/clFFT/archive/v2.12.2.tar.gz
 Source0  : https://github.com/clMathLibraries/clFFT/archive/v2.12.2.tar.gz
 Summary  : Open source OpenCL FFT library
@@ -73,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581452760
+export SOURCE_DATE_EPOCH=1592614633
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -81,15 +81,15 @@ export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %cmake ../src/
 make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1581452760
+export SOURCE_DATE_EPOCH=1592614633
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clFFT
 cp %{_builddir}/clFFT-2.12.2/LICENSE %{buildroot}/usr/share/package-licenses/clFFT/2b8b815229aa8a61e483fb4ba0588b8b6c491890
